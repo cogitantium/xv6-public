@@ -6,32 +6,35 @@ void print(int array[], int size);
 
 int main(int argc, char** argv) {
     
-    // hardcode array, calculate size of array, and initialise pointers
-    int input[] = {1,2,3,4,3,5,3,3,3,6};
-    int size = sizeof(input) / sizeof(int), left = 0, right = 1;
+    // hardcode array, calculate initial size of array, and initialise pointers
+    int array[] = {1,2,3,4,3,5,3,3,3,6};
+    int initSize = sizeof(array) / sizeof(int), finalSize, left = 0, right = 1;
     
     // pretty-print array
-    print(input, size);
+    print(array, initSize);
 
     do {
         // if rightside is smaller than leftside, then swap, else increment
-        if (input[right] < input[left]) {
+        if (array[left] > array[right]) {
             // increment right pointer until sorted acendingly
-            while (input[right] < input[left]) {
+            while (array[left] > array[right]) {
                 right++;
             }
             // insert next correct element immediately to the right of leftmost correct element
-            input[left+1] = input[right];
+            array[left+1] = array[right];
             // increment left pointer after swap
             left++;          
         } else { // else increment both pointers
             left++;
             right++;
         }
-    } while(right < size);
+    } while(right < initSize);
     
+    // after 'sorting', the size of the array is now the left pointer
+    finalSize = left;
+
     // pretty-print array
-    print(input, left);
+    print(array, finalSize);
 
     exit();
 }
