@@ -6,7 +6,7 @@ void print(int array[], int size);
 
 int main(int argc, char** argv) {
     
-    int input[] = {1,2,3,4,3,5};
+    int input[] = {1,2,3,4,3,5,3,3,3,6};
     int size = sizeof(input) / sizeof(int);
     printf(1, "size of array is: %d\n", size);
 
