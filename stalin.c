@@ -6,13 +6,11 @@ void print(int array[], int size);
 
 int main(int argc, char** argv) {
     
+    // hardcode array, calculate size of array, and initialise pointers
     int input[] = {1,2,3,4,3,5,3,3,3,6};
-    int size = sizeof(input) / sizeof(int);
-    printf(1, "size of array is: %d\n", size);
-
-    //int size = 6;
-    int left = 0, right = 1;
+    int size = sizeof(input) / sizeof(int), left = 0, right = 1;
     
+    // pretty-print array
     print(input, size);
 
     do {
@@ -32,6 +30,7 @@ int main(int argc, char** argv) {
         }
     } while(right < size);
     
+    // pretty-print array
     print(input, left);
 
     exit();
