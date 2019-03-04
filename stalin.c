@@ -8,6 +8,8 @@ int main(int argc, char** argv) {
     
     int input[] = {1,2,3,4,3,5};
     int size = sizeof(input) / sizeof(int);
+    printf(1, "size of array is: %d\n", size);
+
     //int size = 6;
     int left = 0, right = 1;
     
@@ -28,11 +30,9 @@ int main(int argc, char** argv) {
             left++;
             right++;
         }
-        // increment right pointer when done with one iteration
-        right++;
     } while(right < size);
     
-    print(input, size);
+    print(input, left);
 
     exit();
 }
@@ -40,6 +40,8 @@ int main(int argc, char** argv) {
 void print(int array[], int size) {
     for (int i = 0; i < size; i++) {
         printf(1, "%d", array[i]);
-        if (i != size) printf(1, ", ");
+        // print comma-separated until last
+        if (i != size - 1) printf(1, ", ");
     }
+    printf(1, "\n");
 }
