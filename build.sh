@@ -7,4 +7,4 @@ sudo docker run -it -v ~/aau/dat04/pss/xv6-public:/root/xv6-public -w /root/xv6-
 sudo chmod a+rwx xv6.img fs.img
 
 # run xv6.img
-make qemu-nox
+exec make qemu-nox

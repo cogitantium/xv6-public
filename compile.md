@@ -11,3 +11,5 @@
 
 
 Alternatively build a Docker image with these dependencies, and tag it something sensible such as 'xv6-build' and simply run `build.sh` to run xv6.
+
+Use `ctrl+a c` and then `q` to exit QEMU.
